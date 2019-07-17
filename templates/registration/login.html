@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+
+{% block bodycontent %}
+  <h1>Kindly fill the form below</h1>
+  <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button>Login</button>
+  </form>
+{% endblock bodycontent %}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+
+{% block bodycontent %}
+  <h1>Create a new account</h1>
+  <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button>Submit</button>
+  </form>
+{% endblock bodycontent %}
